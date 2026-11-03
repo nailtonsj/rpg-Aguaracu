@@ -1,0 +1,18 @@
+export const reset    = `\x1b[0m`;
+export const preto    = `\x1b[30m`;
+export const branco   = `\x1b[37m`;
+export const ciano    = `\x1b[36m`;
+export const azul     = `\x1b[34m`;
+export const roxo     = `\x1b[35m`;
+export const verde    = `\x1b[32m`;
+export const amarelo  = `\x1b[33m`;
+export const vermelho = `\x1b[31m`;
+
+export const fundoPreto    = '\x1b[40m';
+export const fundoVermelho = '\x1b[41m';
+export const fundoVerde    = '\x1b[42m';
+export const fundoAmarelo  = '\x1b[43m';
+export const fundoAzul     = '\x1b[44m';
+export const fundoRoxo     = '\x1b[45m';
+export const fundoCiano    = '\x1b[46m';
+export const fundoBranco   = '\x1b[47m';
