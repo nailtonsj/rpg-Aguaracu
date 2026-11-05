@@ -1,81 +1,86 @@
+const area0 = require("./areas/area0");
+const area1 = require("./areas/area1");
+const entidades = require("./entidades");
+const luta1 = require("./sistemas/lutas");
+
 const prompt = require("prompt-sync")();
 
-let vezJogando = 0;
-let locajogl = 0;
-let locaisAreaZero = 0;
-let locaisAreaUm = 0;
-let locaisAreaDois = 0;
-let locaisAreaTres = 0;
-let locaisAreaQuatro = 0;
-let locaisAreaCinco = 0;
+let local = 0;
 let jogando = false;
+let ajudouOMendigo = 0; // 0(nada acontece) 1(ajudou)(ganha a carta "Mago Negro") 2(ignorou)(ele se revela como o próprio Mago Negro na luta contra o Exodia e aumenta a vida do Exodia)
+// let locaisAreaZero = 0;
+// let locaisAreaUm = 0;
+// let locaisAreaDois = 0;
+// let locaisAreaTres = 0;
+// let locaisAreaQuatro = 0;
+// let locaisAreaCinco = 0;
 
 
-const textos = {
-    inicio:
-    `Olá, jogador. Bem vindo ao --- . Este é um jogo RPG de terminal.
+
+
+console.log(`Olá, jogador. Bem vindo ao --- . Este é um jogo RPG de terminal.
     Não haverá imagens, apenas textos onde você poderá fazer escolhas
-    digitando "1", "2", "3" ou "4" para tomar uma decisão quando for 
+    digitando "1", "2", "3" ou "4" e confirmando com "ENTER" para tomar uma decisão quando for 
     necessário. Mesmo não tendo a parte gráfica, lhe garanto que será
-    muito divertido, aproveite!`
-}
+    muito divertido, aproveite!
 
-console.log(textos.inicio);
+    Quer começar a jogar?
+1 - SIM                                                 2 - NÃO\n`);
 
-jogando = Number(prompt(
-    `Quer começar a jogar?
-1 - SIM                                                 2 - NÃO\n>`));
+jogando = Number(prompt(`>`));
+
+if (jogando === 1){
+
+    console.log(
+        `texto chegou na área 0 pela primeira vez\n`)
+
+
 
 while(jogando){
+    
+
+   
     if (local === 0){
-        if (vezJogando === 0){
-            console.log(textos.descobriuADungeon);
-            vezJogando = 1;
-        } else if (vezJogando === 1){
-            console.log(textos.estaNaAreaZero);
+        local = area0();
+        if (local === 'ùndefined'){
+            local = 0;
         }
-
-        locaisAreaZero = prompt(
-    `Digite:
-1 - local 1                                                2 - local 2
-3 - local 3                                                4 - local 4`);
-
-        if (locaisAreaZero === 1){
-
-        }
-
-        if (locaisAreaZero === 2){
-            
-        }
-
-        if (locaisAreaZero === 3){
-            
-        }
-
-        if (locaisAreaZero === 4){
-            
-        }
-    
-
-    
+        
 
     }
 
-    if (local === 1){
+    else if (local === 1){
+         local = area1();
+        if (local === 'ùndefined'){
+            local = 0;
+        }
 
     }
 
-    if (local === 3){
+    else if (local === 2){
+        console.log(`Estive na Área 2\n`);
+        local = 0;
 
     }
 
-    if (local === 4){
+    else if (local === 3){
+        console.log(`Estive na Área 3\n`);
+        local = 0;
 
     }
 
-    if (local === 5){
+    else if (local === 4){
+        console.log(`Estive na Área 4\n`);
+        local = 0;
+
+    }
+
+    else if (local === 5){
+        console.log(`Estive na Área 5\n`);
+        local = 0;
 
     }
 
 
+}
 }
