@@ -4,8 +4,8 @@ const entidades = {
 
     jogador: {
         nome: "",
-        vidaMax: 10,
-        vida: 10,
+        vidaMax: 20,
+        vida: 20,
         inventario: {
             pocaoDeVida: 0,
             dinheiro: 50,
@@ -13,22 +13,34 @@ const entidades = {
             temMagoNegro: 0,
             
         },
-        atk: {
+        ataques: {
             ataque1: {
-                dano: 0,
-                nome: "",
+                dano: 2,
+                nome: "atk t",
+                elemento: "terra",
+                quantidadeMax: 6,
+                quantidade: 6,
             },
             ataque2: {
-                dano: 0,
-                nome: "",
+                dano: 3,
+                nome: "atk f",
+                elemento: "fogo",
+                quantidadeMax: 3,
+                quantidade: 3,
             },
             ataque3: {
-                dano: 0,
-                nome: "",
+                dano: 4,
+                nome: "atk p",
+                elemento: "planta",
+                quantidadeMax: 3,
+                quantidade: 3,
             },
             ataque4: {
-                dano: 0,
-                nome: "",
+                dano: 5,
+                nome: "atk a",
+                elemento: "agua",
+                quantidadeMax: 3,
+                quantidade: 3,
             },
         },
     },
@@ -38,10 +50,9 @@ const entidades = {
         inimigo1: {
 
             nome: "ini1",
-            vidaMax: 1,
-            vida: 1,
-            resistencia: "",
-            fraquesa: "",
+            vidaMax: 10,
+            vida: 10,
+            elemento: "terra",
             dano: [1,2,3,4], // 4 possíveis danos que esse inimigo dá
             drops: {
                 dinheiro: [10,20,30]
@@ -51,10 +62,9 @@ const entidades = {
         inimigo2: {
 
             nome: "ini2",
-            vidaMax: 2,
-            vida: 2,
-            resistencia: "",
-            fraquesa: "",
+            vidaMax: 10,
+            vida: 10,
+            elemento: "terra",
             dano: [1,2,3,4], // 4 possíveis danos que esse inimigo dá
             drops: {
                 dinheiro: [10,20,30]
@@ -64,10 +74,9 @@ const entidades = {
          inimigo3: {
 
             nome: "ini3",
-            vidaMax: 3,
-            vida: 3,
-            resistencia: "",
-            fraquesa: "",
+            vidaMax: 10,
+            vida: 10,
+            elemento: "terra",
             dano: [1,2,3,4], // 4 possíveis danos que esse inimigo dá
             drops: {
                 dinheiro: [10,20,30]
@@ -77,10 +86,9 @@ const entidades = {
          inimigo4: {
 
             nome: "ini4",
-            vidaMax: 4,
-            vida: 4,
-            resistencia: "",
-            fraquesa: "",
+            vidaMax: 10,
+            vida: 10,
+            elemento: "terra",
             dano: [1,2,3,4], // 4 possíveis danos que esse inimigo dá
             drops: {
                 dinheiro: [10,20,30]
@@ -92,7 +100,7 @@ const entidades = {
         nome: "",
         vidaMax: 0,
         vida: 0,
-        atk: {
+        ataques: {
             ataque1: {
                 dano: 0,
                 nome: "",

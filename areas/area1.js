@@ -1,7 +1,7 @@
 const luta1 = require("../sistemas/lutas");
 
 function area1() {
-    return luta1();
+    return luta1('area1');
     
 }
 

@@ -10,7 +10,7 @@ let escolhaPrincipal = 0;
 function area0(){
 
     if (escolhaPrincipal === 0){
-        console.log( `Você está na entrada da Pirâmide!!\nVocê olha ao redor e avista algumas coisas peculiares\nEscolha um local para ir (DIGITE):\n1 - Se aproximar de um moço estranho. \n2 - Entrar em uma casinha que aparenta ser uma Loja. \n3 - Investigar 5 túneis mais ao fundo.\n`)
+        console.log( `\nVocê está na entrada da Pirâmide!!\nVocê olha ao redor e avista algumas coisas peculiares\nEscolha um local para ir (DIGITE):\n\n1 - Se aproximar de um moço estranho. \n2 - Entrar em uma casinha que aparenta ser uma Loja. \n3 - Investigar 5 túneis mais ao fundo.\n`)
         escolhaPrincipal = Number(prompt(`>`));
         return 0;
         }
@@ -30,11 +30,13 @@ function area0(){
                 entidades.jogador.inventario.dinheiro = entidades.jogador.inventario.dinheiro - entidades.jogador.inventario.dinheiro;
                 entidades.jogador.inventario.temMagoNegro = 1; // condição para deixar o exodia mais fraco na batalha final
                 escolhaPrincipal = 0;
+                prompt(`>`);
                 return 0;
                } else {
                 console.log(`\nVocê não tem dinheiro para doar ao andarilho!\n`);
                 ajudouOMendigo = 0;
                 escolhaPrincipal = 0;
+                prompt(`>`);
                 return 0;
                     
                }
@@ -44,6 +46,7 @@ function area0(){
                     `O mendigo te xinga e cospe na sua cara.\nMendigo: "Arroganntchi!"\nVocê nunca mais o verá (Ou será que não?)\n`);
                 escolhaPrincipal = 0;
                 ajudouOMendigo = 2;
+                prompt(`>`);
                 return 0;
 
             }
@@ -77,7 +80,7 @@ function area0(){
          
     }
     else {
-        console.log(`Valor inválido, digite outra coisa`);
+        console.log(`\nValor inválido, digite outra coisa\n`);
         escolhaPrincipal = 0;
         return 0;
     }

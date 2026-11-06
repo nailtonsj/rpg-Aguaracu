@@ -1,10 +1,17 @@
 const area0 = require("./areas/area0");
 const area1 = require("./areas/area1");
+const area2 = require("./areas/area2");
+const area3 = require("./areas/area3");
+const area4 = require("./areas/area4");
+const area5 = require("./areas/area5");
 const entidades = require("./entidades");
 const luta1 = require("./sistemas/lutas");
 
+
+
 const prompt = require("prompt-sync")();
 
+// entidades.jogador.inventario.partesDoExodia = 4;
 let local = 0;
 let jogando = false;
 let ajudouOMendigo = 0; // 0(nada acontece) 1(ajudou)(ganha a carta "Mago Negro") 2(ignorou)(ele se revela como o próprio Mago Negro na luta contra o Exodia e aumenta a vida do Exodia)
@@ -25,18 +32,17 @@ console.log(`Olá, jogador. Bem vindo ao --- . Este é um jogo RPG de terminal.
     muito divertido, aproveite!
 
     Quer começar a jogar?
-1 - SIM                                                 2 - NÃO\n`);
+0 - SIM                                                 1 - NÃO\n`);
 
 jogando = Number(prompt(`>`));
 
-if (jogando === 1){
+if (jogando === 0){
 
-    console.log(
-        `texto chegou na área 0 pela primeira vez\n`)
+    console.log(`\ntexto chegou na área 0 pela primeira vez\n`)
+    prompt(`>`);
+    
 
-
-
-while(jogando){
+while(jogando === 0){
     
 
    
@@ -50,7 +56,7 @@ while(jogando){
     }
 
     else if (local === 1){
-         local = area1();
+        local = area1();
         if (local === 'ùndefined'){
             local = 0;
         }
@@ -58,26 +64,35 @@ while(jogando){
     }
 
     else if (local === 2){
-        console.log(`Estive na Área 2\n`);
-        local = 0;
+        local = area2();
+        if (local === 'ùndefined'){
+            local = 0;
+        }
 
     }
 
     else if (local === 3){
-        console.log(`Estive na Área 3\n`);
-        local = 0;
+        local = area3();
+        if (local === 'ùndefined'){
+            local = 0;
+        }
 
     }
 
     else if (local === 4){
-        console.log(`Estive na Área 4\n`);
-        local = 0;
+        local = area4();
+        if (local === 'ùndefined'){
+            local = 0;
+        }
 
     }
 
     else if (local === 5){
-        console.log(`Estive na Área 5\n`);
-        local = 0;
+        local = area5();
+        jogando = local
+        if (local === 'ùndefined'){
+            local = 0;
+        }
 
     }
 
